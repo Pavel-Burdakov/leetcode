@@ -3,11 +3,10 @@ class Solution {
         int l = p.length();
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i<=s.length()-p.length(); i++){
-            if (p.contains(s.charAt(i)+"")){
             if (isAnagram(s.substring(i, i+l), p)){
                 list.add(i);
             }
-            }
+            
         }
         return list;
         
