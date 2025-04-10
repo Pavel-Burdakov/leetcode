@@ -2,8 +2,9 @@ class Solution {
     public List<Integer> findAnagrams(String s, String p) {
         int l = p.length();
         List<Integer> list = new ArrayList<>();
+        StringBuilder sb = new StringBuilder(s);
         for (int i = 0; i<=s.length()-p.length(); i++){
-            if (isAnagram(s.substring(i, i+l), p)){
+            if (isAnagram(sb.substring(i, i+l), p)){
                 list.add(i);
             }
             
